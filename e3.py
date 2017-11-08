@@ -22,8 +22,11 @@ df["Republican Share"] = df["Republican"] / df["Total Votes Cast"]
 df.plot(kind = "scatter", x = "Year", y = "Republican Share", alpha =0.2)
 
 #since I have just one year, the plot is just one point for each of the three counties
-acc = df.head(1)#accomak county
-acc.plot(kind = "scatter", x = "Year", y = "Republican Share", alpha =0.5)
+acc=acc.plot(x='Year', y='Republican Share', kind='bar')
+acc.set_xlabel("Years")
+acc.set_ylabel("% of Republican Votes")
+acc.get_figure().savefig('accomack_county.pdf', format='pdf')
+#you would do something similar for the other counties too
 albe = df.iloc[2].to_dict()
 ale = df.iloc[3].to_dict()
 all = df.iloc[4].to_dict()
