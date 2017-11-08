@@ -24,3 +24,6 @@ df.plot(kind = "scatter", x = "Year", y = "Republican Share", alpha =0.2)
 #since I have just one year, the plot is just one point for each of the three counties
 acc = df.head(1)#accomak county
 acc.plot(kind = "scatter", x = "Year", y = "Republican Share", alpha =0.5)
+albe = df.iloc[2].to_dict()
+ale = df.iloc[3].to_dict()
+all = df.iloc[4].to_dict()
